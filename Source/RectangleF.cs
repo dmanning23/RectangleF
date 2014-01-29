@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.Serialization;
 using Microsoft.Xna.Framework;
 
-namespace RectangleF
+namespace RectangleFLib
 {
 	[DataContract]
 	public struct RectangleF : IEquatable<RectangleF>
@@ -180,19 +180,19 @@ namespace RectangleF
 
 		public bool Intersects(RectangleF value)
 		{
-			return value.Left < Right &&
-				   Left < value.Right &&
-				   value.Top < Bottom &&
-				   Top < value.Bottom;
+			return value.Left <= Right &&
+				   Left <= value.Right &&
+				   value.Top <= Bottom &&
+				   Top <= value.Bottom;
 		}
 
 
 		public void Intersects(ref RectangleF value, out bool result)
 		{
-			result = value.Left < Right &&
-					 Left < value.Right &&
-					 value.Top < Bottom &&
-					 Top < value.Bottom;
+			result = value.Left <= Right &&
+					 Left <= value.Right &&
+					 value.Top <= Bottom &&
+					 Top <= value.Bottom;
 		}
 
 		public static RectangleF Intersect(RectangleF value1, RectangleF value2)
