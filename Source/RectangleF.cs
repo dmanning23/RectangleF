@@ -186,7 +186,6 @@ namespace RectangleFLib
 				   Top <= value.Bottom;
 		}
 
-
 		public void Intersects(ref RectangleF value, out bool result)
 		{
 			result = value.Left <= Right &&
@@ -201,7 +200,6 @@ namespace RectangleFLib
 			Intersect(ref value1, ref value2, out rectangle);
 			return rectangle;
 		}
-
 
 		public static void Intersect(ref RectangleF value1, ref RectangleF value2, out RectangleF result)
 		{
@@ -234,6 +232,20 @@ namespace RectangleFLib
 			result.Y = Math.Min(value1.Y, value2.Y);
 			result.Width = Math.Max(value1.Right, value2.Right) - result.X;
 			result.Height = Math.Max(value1.Bottom, value2.Bottom) - result.Y;
+		}
+
+		public RectangleF(Rectangle value)  //constructor
+		{
+			X = value.X;
+			Y = value.Y;
+			Width = value.Width;
+			Height = value.Height;
+		}
+
+		public static implicit operator Microsoft.Xna.Framework.Rectangle(RectangleF b)  // explicit RectangleF to Rectangle conversion operator
+		{
+			Rectangle d = new Rectangle((int)b.X, (int)b.Y, (int)b.Width, (int)b.Height);
+			return d;
 		}
 
 		#endregion Public Methods
