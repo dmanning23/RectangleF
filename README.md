@@ -1,4 +1,4 @@
 RectangleF
 ==========
 
-Why isn't there a RectangleF in Xna/MonoGame???
+Simple MonoGame library for a rectangle that uses float values instead of int
