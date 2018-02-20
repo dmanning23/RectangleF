@@ -44,8 +44,10 @@ x64/
 .DS_Store
 ._.DS_Store
 UpgradeLog.htm
+project.lock.json
 
 # Visual C++ cache files
+.vs/
 ipch/
 *.aps
 *.ncb
