@@ -2,16 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>RectangleF</id>
-		<version>2.0.0</version>
+		<version>4.0.0</version>
 		<title>RectangleF</title>
 		<authors>dmanning23</authors>
-		<owners>dmanning23</owners>
 		<projectUrl>https://github.com/dmanning23/RectangleF</projectUrl>
 		<licenseUrl>https://github.com/dmanning23/RectangleF/blob/master/LICENSE.txt</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Simple MonoGame library for a rectangle that uses float values instead of int</description>
-		<releaseNotes />
-		<copyright>Copyright 2016</copyright>
 		<tags>pcl, windows phone, winphone, android, ios, windows universal, monogame</tags>
 		<dependencies>
 
@@ -25,13 +21,7 @@
 				<dependency id="MonoGame.Framework.iOS" version="3.7"/>
 			</group>
 
-			<!--Win Universal-->
-			<group targetFramework="uap10.0">
-				<dependency id="MonoGame.Framework.WindowsUniversal" version="3.7"/>
-				<dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="6.1"/>
-			</group>
-
-			<group targetFramework="net451">
+			<group targetFramework="net452">
 				<dependency id="MonoGame.Framework.WindowsDX" version="3.7"/>
 			</group>
 
@@ -47,13 +37,9 @@
 		<file src="RectangleF.iOS\bin\Release\RectangleF.iOS.pdb" target="lib\Xamarin.iOS10\RectangleF.iOS.pdb" />
 		<file src="RectangleF.iOS\bin\Release\RectangleF.iOS.dll" target="lib\Xamarin.iOS10\RectangleF.iOS.dll" />
 
-		<!--Windows Universal-->
-		<file src="RectangleF.WindowsUniversal\bin\Release\RectangleF.WindowsUniversal.pdb" target="lib\uap10.0\RectangleF.WindowsUniversal.pdb" />
-		<file src="RectangleF.WindowsUniversal\bin\Release\RectangleF.WindowsUniversal.dll" target="lib\uap10.0\RectangleF.WindowsUniversal.dll" />
-
 		<!--WindowsDX-->
-		<file src="RectangleF.WindowsDX\bin\Release\RectangleF.WindowsDX.pdb" target="lib\net451\RectangleF.WindowsDX.pdb" />
-		<file src="RectangleF.WindowsDX\bin\Release\RectangleF.WindowsDX.dll" target="lib\net451\RectangleF.WindowsDX.dll" />
+		<file src="RectangleF.WindowsDX\bin\Release\RectangleF.WindowsDX.pdb" target="lib\net452\RectangleF.WindowsDX.pdb" />
+		<file src="RectangleF.WindowsDX\bin\Release\RectangleF.WindowsDX.dll" target="lib\net452\RectangleF.WindowsDX.dll" />
 
 	</files>
 </package>
